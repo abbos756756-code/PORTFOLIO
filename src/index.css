@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --olive: #B1B394;
+    --olive-dark: #9fa180;
+    --olive-light: #c8caa9;
+    --olive-bg: rgba(177, 179, 148, 0.12);
+    --dark: #111111;
+    --gray-bg: #d2d4d8;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom styling for precise match */
+.font-poppins {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.text-olive {
+  color: #B1B394;
+}
+
+.bg-olive {
+  background-color: #B1B394;
+}
+
+.border-olive {
+  border-color: #B1B394;
+}
+
+/* Diagonal shape divider */
+.diagonal-divider {
+  clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);
+}
+
+@media (max-width: 1024px) {
+  .diagonal-divider {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B1B394;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9fa180;
+}
